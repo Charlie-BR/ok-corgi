@@ -12,7 +12,7 @@
   <section>
     <h3>Dogs You've Liked</h3>
     <% for (var i = 0; i < dogs.length; i++) { %>
-      <h6><% dogs[i].dogName %></h6>
+      <h6><%= dogs[i].dogName %></h6>
       <img src="<%= dogs[i].dogPic %>" class="corgi-profile">
     <% } %>
   </section>
