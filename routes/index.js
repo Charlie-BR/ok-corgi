@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var router = express.Router();
-mongoose.connect('mongodb://ok_corgi:ok_corgi@ds039404.mongolab.com:39404/ok_corgi');
+mongoose.connect('mongodb://'+process.env.WDI_MONGOLAB_USER+':'+process.env.WDI_MONGOLAB_PW+'@ds039404.mongolab.com:39404/ok_corgi');
 
 var Schema = mongoose.Schema;
 
