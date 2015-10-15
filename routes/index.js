@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+mongoose.connect('mongodb://ok_corgi:ok_corgi@ds039404.mongolab.com:39404/ok_corgi');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
