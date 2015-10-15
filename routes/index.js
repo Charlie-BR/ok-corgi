@@ -27,9 +27,14 @@ router.get('/', function(req, res, next) {
 				var dog = null;
 			} else {
 				var i = Math.floor(Math.random()*count);
+				console.log(i);
+				Dog.find({},function(err, dawg){
+					var dog = dawg[i]["dogName"];
+				})
 			}	
 		});
 	}
+	dog();
   // res.render('index', { title: 'Express', dogs: [] });
 
 });
