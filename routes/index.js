@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', dogs: [1] });
+  res.render('index', { title: 'Express', dogs: [] });
 });
 
 /* POST when the user "likes" a new Corgi. */
