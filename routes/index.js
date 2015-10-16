@@ -32,6 +32,7 @@ router.get('/', function(req, res, next) {
 				Dog.find({},function(err, dawg){
 					var dog = dawg[i]["dogName"];
 					var pic = dawg[i]["dogPic"];
+					id = dawg[i]["_id"];
 					console.log(dog);
 					res.render('index', { title: 'hello', dog: dog, pic: pic});
 				})
@@ -44,7 +45,7 @@ router.get('/', function(req, res, next) {
 
 /* POST when the user "likes" a new Corgi. */
 router.post('/likes', function(req, res, next) {
-	console.log(dogName);
+	console.log(id);
 });
 
 module.exports = router;
