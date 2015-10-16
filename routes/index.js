@@ -16,7 +16,7 @@ var dogSchema = new Schema({
 });
 
 var Dog = mongoose.model('Dog', dogSchema);
-console.log(Dog);
+// console.log(Dog);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -25,12 +25,24 @@ router.get('/', function(req, res, next) {
 		Dog.count(function(err, count){
 			if(err){
 				var dog = null;
+				res.redirect("/");
 			} else {
 				var i = Math.floor(Math.random()*count);
+				console.log(i);
+				Dog.find({},function(err, dawg){
+					var dog = dawg[i]["dogName"];
+					var pic = dawg[i]["dogPic"];
+					console.log(dog);
+					console.log(pic);
+					res.render('index', { title: 'hello', dog: dog, pic: pic});
+
+				})
 			}	
 		});
 	}
-  // res.render('index', { title: 'Express', dogs: [] });
+
+	dog();
+
 
 });
 
