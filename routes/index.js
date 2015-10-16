@@ -13,6 +13,7 @@ var Schema = mongoose.Schema;
 var dogSchema = new Schema({
     dogName: String,
     dogPic: String,
+    dogLike: Boolean,
 });
 
 var Dog = mongoose.model('Dog', dogSchema);
@@ -28,27 +29,28 @@ router.get('/', function(req, res, next) {
 				res.redirect("/");
 			} else {
 				var i = Math.floor(Math.random()*count);
-				console.log(i);
 				Dog.find({},function(err, dawg){
 					var dog = dawg[i]["dogName"];
 					var pic = dawg[i]["dogPic"];
 					console.log(dog);
-					console.log(pic);
 					res.render('index', { title: 'hello', dog: dog, pic: pic});
-
 				})
 			}	
 		});
 	}
-
 	dog();
-
-
 });
+
+dogs w/ booleans in the database
+
+dogs w/ array
+- user id to 1
+
+
 
 /* POST when the user "likes" a new Corgi. */
 router.post('/likes', function(req, res, next) {
-
+	console.log(dogName);
 });
 
 module.exports = router;
