@@ -5,4 +5,5 @@ var Schema = mongoose.Schema;
 var dogSchema = new Schema({
     dogName: String,
     dogPic: String,
+    dogLike: Boolean,
 });

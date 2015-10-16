@@ -41,12 +41,6 @@ router.get('/', function(req, res, next) {
 	dog();
 });
 
-dogs w/ booleans in the database
-
-dogs w/ array
-- user id to 1
-
-
 
 /* POST when the user "likes" a new Corgi. */
 router.post('/likes', function(req, res, next) {
