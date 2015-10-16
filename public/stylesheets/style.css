@@ -2,3 +2,15 @@
   max-width: 100%;
   height: auto;
 }
+
+#likedPic {
+	border-radius: 100%;
+	height: auto;
+	width: 200px;
+}
+
+#dogPic {
+	height: auto;
+	width: 400px;
+	border-radius: 10%;
+}
